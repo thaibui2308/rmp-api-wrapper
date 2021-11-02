@@ -9,11 +9,12 @@ import (
 )
 
 type Instructor struct {
-	SchoolID  string
-	ID        string
-	Firstname string
-	Lastname  string
-	Found     bool
+	SchoolID    string
+	ID          string
+	Firstname   string
+	Lastname    string
+	Institution string
+	Found       bool
 }
 
 func NewInstructor(schoolID int, firstname, lastname string) Instructor {
@@ -53,6 +54,7 @@ func (s *Instructor) Find() (models.Professor, error) {
 
 	s.Found = true
 	s.ID = strconv.Itoa(professor.Tid)
+	s.Institution = professor.InstitutionName
 
 	return professor, err
 }

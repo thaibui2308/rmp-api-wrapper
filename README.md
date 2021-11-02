@@ -89,7 +89,7 @@ import (
 )
 
 func main() {
-  s := remp.NewInstructor(877, "Vadim", "Ponomarenko")
+  s := rmp.NewInstructor(877, "Vadim", "Ponomarenko")
   instructor, err := s.Find()
   if err != nil {
     log.Fatal(err)
